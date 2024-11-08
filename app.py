@@ -7,7 +7,7 @@ from config.proxy_config import get_proxy_config
 from BOT.command.video import register_handlers
 from BOT.command.dc import register_dc_handler
 from BOT.command.Music import register_music_163
-from BOT.command.help import register_handlers
+from BOT.command.help import register_help
 
 
 sys.path.append(os.path.dirname(os.path.abspath(__file__)))
@@ -33,7 +33,7 @@ async def main():
             await message.reply("你只能在群聊中使用")
 
         register_dc_handler(app) # 注册 dc 处理程序
-        register_handlers(app) # 注册帮助处理程序
+        register_help(app) # 注册帮助处理程序
         register_music_163(app) # 注册音乐处理程序
         register_handlers(app) # 注册视频处理程序
         await idle()  # 保持客户端运行

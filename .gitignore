@@ -166,5 +166,5 @@ cython_debug/
 config.ini
 
 # session files
-.session
-.session-journal
+*.session-journal
+*.session
