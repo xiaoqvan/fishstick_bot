@@ -1,0 +1,3 @@
+[submodule "BOT/command/videos"]
+	path = BOT/command/videos
+	url = https://github.com/MLeaf-coder/parse-video-py.git
