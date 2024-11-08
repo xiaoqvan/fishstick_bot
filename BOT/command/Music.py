@@ -1,4 +1,5 @@
 from pyrogram import Client, filters
+from pyrogram.handlers import MessageHandler
 import httpx
 
 def search_song(song_name):
@@ -30,4 +31,4 @@ async def music_163(client, message):
         
 
 def register_music_163(app):
-    app.on_message(filters.command("music"))(music_163)
+    app.add_handler(MessageHandler(music_163, filters.command("music")))
